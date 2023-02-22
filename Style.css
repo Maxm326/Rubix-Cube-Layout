@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+}
+
+table,td {
+    border: 1px solid #999;
+}
+
+table {
+    height:200px;
+    width:200px;
+    padding:30px;
+
+}
+
+.face1 .back td {
+    background-color: orange;
+}
+
+.face2 .left td {
+    background-color: green;
+}
+
+.face2 .top td {
+    background-color: white;
+}
+
+.face2 .right td {
+    background-color: blue;
+}
+
+.face3 .front td {
+    background-color: red;
+}
+
+.face4 .bottom td {
+    background-color: yellow;
+}
+
+div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
