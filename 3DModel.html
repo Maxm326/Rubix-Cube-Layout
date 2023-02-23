@@ -11,7 +11,7 @@ app</title>
    <body>
       <script type="module">
          import * as THREE from 'https://unpkg.com/three/build/three.module.js';
-         // create a renderer
+// create a renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -23,23 +23,49 @@ camera.position.z = 5;
 // create a scene
 const scene = new THREE.Scene();
 
-// create a cube geometry
-const geometry = new THREE.BoxGeometry();
+// create cube's geometry
+const cubeSize = 1;
+const cubeSpacing = 0.05;
+const cubeGeometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
 
-// create a material
-const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+// create materials for each face of the cube
+const materials = [
+  new THREE.MeshBasicMaterial({ color: 0xff0000 }), // Red
+  new THREE.MeshBasicMaterial({ color: 0xffffff }), // White
+  new THREE.MeshBasicMaterial({ color: 0x00ff00 }), // Green
+  new THREE.MeshBasicMaterial({ color: 0xffff00 }), // Yellow
+  new THREE.MeshBasicMaterial({ color: 0x0000ff }), // Blue
+  new THREE.MeshBasicMaterial({ color: 0xffa500 }) // Orange
+];
 
-// create a mesh and add it to the scene
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+// create cube mesh and add it to the scene
+const rubiksCube = new THREE.Group();
+for (let x = -1; x <= 1; x++) {
+  for (let y = -1; y <= 1; y++) {
+    for (let z = -1; z <= 1; z++) {
+      const cube = new THREE.Mesh(cubeGeometry, materials);
+
+      cube.position.set(
+        x * (cubeSize + cubeSpacing),
+        y * (cubeSize + cubeSpacing),
+        z * (cubeSize + cubeSpacing)
+      );
+
+      rubiksCube.add(cube);
+    }
+  }
+}
+scene.add(rubiksCube);
 
 // render the scene
 function animate() {
   requestAnimationFrame(animate);
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+  rubiksCube.rotation.x += 0.005; //rotation speed control , x axis
+  rubiksCube.rotation.y += 0.005; //rotation speed control , y axis
   renderer.render(scene, camera);
 }
+animate();
+
 animate();
             animate();
       </script>
