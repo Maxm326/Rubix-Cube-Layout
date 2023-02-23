@@ -2,12 +2,13 @@
 <html>
 <head>
     <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
     <title>2D Rubix Cube Layout</title>
 </head>
 
 <body>
 <div class="face1">
-    <table class="back">
+    <table id="back">
         <tr>
             <td>1</td>
             <td>2</td>
@@ -25,98 +26,100 @@
         </tr>
     </table>
 </div>
+<button onclick="rotateCells('back','counterclockwise')">Rotate Back Counterclockwise</button>
+<button onclick="rotateCells('back','clockwise')">Rotate Back Clockwise</button>
+
 <div class="face2">
-    <table class="left">
+    <table id="left">
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-    </table>
-    <table class="top">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
         </tr>
     </table>
-    <table class="right">
+    <table id="top">
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+        </tr>
+    </table>
+    <table id="right">
+        <tr>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>35</td>
+            <td>36</td>
         </tr>
     </table>
 </div>
 <div class="face3">
-    <table class="front">
+    <table id="front">
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>37</td>
+            <td>38</td>
+            <td>39</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>40</td>
+            <td>41</td>
+            <td>42</td>
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
+            <td>43</td>
+            <td>44</td>
+            <td>45</td>
         </tr>
     </table>
 </div>
 <div class="face4">
-    <table class="bottom">
+    <table id="bottom">
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>46</td>
+            <td>47</td>
+            <td>48</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>49</td>
+            <td>50</td>
+            <td>51</td>
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
+            <td>52</td>
+            <td>53</td>
+            <td>54</td>
         </tr>
     </table>
 </div>
-
 
 </body>
 </html>

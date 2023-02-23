@@ -1,39 +1,38 @@
 body {
-    background-color: black;
+    background-color: grey;
 }
 
-table,td {
-    border: 1px solid #999;
+td {
+    border: 1px solid black;
 }
 
 table {
-    height:200px;
-    width:200px;
-    padding:30px;
-
+    height:300px;
+    width:300px;
+    padding:10px;
 }
 
-.face1 .back td {
+.face1 #back td {
     background-color: orange;
 }
 
-.face2 .left td {
+.face2 #left td {
     background-color: green;
 }
 
-.face2 .top td {
+.face2 #top td {
     background-color: white;
 }
 
-.face2 .right td {
+.face2 #right td {
     background-color: blue;
 }
 
-.face3 .front td {
+.face3 #front td {
     background-color: red;
 }
 
-.face4 .bottom td {
+.face4 #bottom td {
     background-color: yellow;
 }
 
