@@ -1,4 +1,4 @@
-# Rubix-Cude-Layout 
+# Rubix-Cube-Layout 
 Designed by Noah Jones and Max Myers
 ***
 ## Purpose
